@@ -14,30 +14,19 @@ import Footer from "../Footer/footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-      contentfulHeader {
-        sectionContent {
-          sectionContent
-        }
-        logo {
-          title
-          fixed {
-            ...GatsbyContentfulFixed_withWebp_noBase64
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
-      <Header data={data.contentfulHeader} siteTitle={data.site.siteMetadata.title} />
+      <Header />
       <div
         style={{
           margin: `0 auto`,
@@ -53,7 +42,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-      <Footer siteTitle={data.site.siteMetadata.title} />
+      <Footer />
     </>
   )
 }
