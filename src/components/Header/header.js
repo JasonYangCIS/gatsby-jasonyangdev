@@ -1,14 +1,17 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Img from "gatsby-image"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ data }) => (
   <header
     style={{
       background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
+    <Img 
+      fixed={data.logo.fixed}
+    />
     <div
       style={{
         margin: `0 auto`,
@@ -16,27 +19,20 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <h1 
+        style={{ margin: 0 }}
+        dangerouslySetInnerHTML={{ __html: data.sectionContent.sectionContent }}
+      />
     </div>
   </header>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  data: PropTypes.object,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  data: ``,
 }
 
 export default Header

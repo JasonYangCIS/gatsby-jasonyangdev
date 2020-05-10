@@ -21,12 +21,23 @@ const Layout = ({ children }) => {
           title
         }
       }
+      contentfulHeader {
+        sectionContent {
+          sectionContent
+        }
+        logo {
+          title
+          fixed {
+            ...GatsbyContentfulFixed_withWebp_noBase64
+          }
+        }
+      }
     }
   `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header data={data.contentfulHeader} siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,

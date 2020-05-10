@@ -1,3 +1,14 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
+// ensure Contentful API keys are set
+if (!process.env.CONTENTFUL_SPACE_ID || !process.env.CONTENTFUL_ACCESS_TOKEN) {
+  throw new Error(
+    'Contentful spaceId and the access token need to be provided.'
+  )
+}
+
 module.exports = {
   siteMetadata: {
     title: `Jason Yang | Frontend Engineer`,
@@ -30,5 +41,12 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 }
