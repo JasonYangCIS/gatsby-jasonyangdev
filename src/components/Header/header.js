@@ -46,7 +46,7 @@ const Header = () => {
 }
 
 Header.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.string,
 }
 
 Header.defaultProps = {
