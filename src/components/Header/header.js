@@ -29,18 +29,10 @@ const Header = () => {
       <Img 
         fixed={data.contentfulHeader.logo.fixed}
       />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
-        <h1 
-          style={{ margin: 0 }}
-          dangerouslySetInnerHTML={{ __html: data.contentfulHeader.sectionContent.sectionContent }}
-        />
-      </div>
+      <h1 
+        style={{ margin: 0 }}
+        dangerouslySetInnerHTML={{ __html: data.contentfulHeader.sectionContent.sectionContent }}
+      />
     </header>
   )
 }
