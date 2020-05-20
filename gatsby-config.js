@@ -35,8 +35,8 @@ module.exports = {
         name: `gatsby-jasonyangdev`,
         short_name: `jasonyangdev`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#787878`,
+        theme_color: `#d27e36`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
