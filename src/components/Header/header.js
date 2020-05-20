@@ -21,14 +21,14 @@ const bounce = keyframes`
 `
 
 const StyledHeader = styled.header`
-  background: ${colors.dkgrey};
+  background: ${colors.dkGrey};
   width: 100%;
   text-align: center;
   display: inline-block;
   box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
 
   @media ${breakpoints.lg} {
-    background: ${colors.dkgrey};
+    background: ${colors.dkGrey};
     position: fixed;
     top: 0;
     left: 0;

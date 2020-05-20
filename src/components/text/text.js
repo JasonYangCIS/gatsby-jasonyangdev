@@ -4,14 +4,14 @@ import styled from 'styled-components';
 import colors from '../_colors';
 
 const StyledTextContainer = styled.div`
-  width: 100%;
-  display: inline-block;
-  h2 {
-    color: ${colors.mdgrey};
+  h1, h2, h3, h4, h5, h6 {
+    color: ${colors.mdGrey};
     font-weight: 400;
+    display: block;
   }
   p {
-    color: ${colors.mdgrey};
+    color: ${colors.mdGrey};
+    font-size: 0.9rem;
   }
 `;
 

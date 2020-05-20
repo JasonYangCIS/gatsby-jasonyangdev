@@ -40,7 +40,7 @@
             height: 42px;
             padding: 0;
             text-indent: -9999px;
-            background-color: $dkgrey;
+            background-color: $dkGrey;
             @include mask-image('../images/user-plus-solid.svg');
             @include mask-position(center);
             @include mask-size(30px 30px);
@@ -109,7 +109,7 @@
                 bottom: 0;
                 left: 0;
                 margin: auto;
-                background: $dkgrey;
+                background: $dkGrey;
                 content: '';
             }
             &:before {
