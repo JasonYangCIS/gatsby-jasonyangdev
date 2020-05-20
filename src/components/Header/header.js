@@ -32,7 +32,9 @@ const Header = () => {
     query SiteHeaderQuery {
       contentfulHeader {
         sectionContent {
-          sectionContent
+          childMarkdownRemark {
+            html
+          }
         }
         logo {
           title
@@ -47,7 +49,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledImg fluid={data.contentfulHeader.logo.fluid} />
-      <StyledHeading1 dangerouslySetInnerHTML={{ __html: data.contentfulHeader.sectionContent.sectionContent }} />
+      <StyledHeading1 dangerouslySetInnerHTML={{ __html: data.contentfulHeader.sectionContent.childMarkdownRemark.html }} />
     </StyledHeader>
   )
 }
