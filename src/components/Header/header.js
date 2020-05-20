@@ -35,6 +35,7 @@ const StyledHeader = styled.header`
     width: ${variables.headerLgWidth};
     z-index: 10;
     height: 100%;
+    box-shadow: 0px 0px 10px ${colors.dkGrey};
   }
   @media ${breakpoints.xl} {
     width: ${variables.headerXlWidth};

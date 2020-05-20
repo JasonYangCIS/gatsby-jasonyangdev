@@ -17,14 +17,14 @@ const StyledTextContainer = styled.div`
 
 class Text extends React.Component {
   render() {
-    const { type, children } = this.props;
+    const { type, className, children } = this.props;
     const validTypes = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p'];
 
     const safeType = type ? type.toLowerCase() : '';
     const TextEle = validTypes.includes(safeType) ? safeType : 'p';
 
     return (
-      <StyledTextContainer>
+      <StyledTextContainer className={className}>
         <TextEle dangerouslySetInnerHTML={{ __html: children }} />
       </StyledTextContainer>
     );

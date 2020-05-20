@@ -11,8 +11,10 @@ const StyledSection = styled.section`
 	border-bottom: 2px solid ${colors.orange};
 	width: 100%;
 	margin: 20px auto;
+	padding: 20px 0;
 	@media ${breakpoints.lg} {
 		margin: 20px 0;
+		padding: 20px 0;
 	}
 `;
 
