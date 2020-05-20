@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Section from "../../components/section/section"
 
 const Introduction = () => {
   const data = useStaticQuery(graphql`
@@ -13,10 +14,10 @@ const Introduction = () => {
     }
   `)
   return(
-    <section>
+    <Section>
       <h2 dangerouslySetInnerHTML={{ __html: data.contentfulIntroduction.sectionTitle }}></h2>
       <p dangerouslySetInnerHTML={{ __html: data.contentfulIntroduction.sectionContent.sectionContent }}></p>
-    </section>
+    </Section>
   )
 }
 

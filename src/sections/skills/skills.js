@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import Section from "../../components/section/section"
 
 const Skills = () => {
   const data = useStaticQuery(graphql`
@@ -17,7 +18,7 @@ const Skills = () => {
     }
   `)
   return(
-    <section>
+    <Section>
       <h2 dangerouslySetInnerHTML={{ __html: data.contentfulMySkillsSection.sectionTitle }}></h2>
       {
         data.contentfulMySkillsSection.mySkillsIcons.map((element, key) => (
@@ -29,7 +30,7 @@ const Skills = () => {
           </div>
         ))
       }
-    </section>
+    </Section>
   )
 }
 

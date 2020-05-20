@@ -1,6 +1,6 @@
 export const variables = {
-	headerLgWidth: '350px',
-	headerXlWidth: '450px',
+	headerLgWidth: '450px',
+	headerXlWidth: '550px',
 };
 
 export default variables;

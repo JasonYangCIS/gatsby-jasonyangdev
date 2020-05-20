@@ -43,22 +43,26 @@ const StyledHeader = styled.header`
 
 const StyledH1Container = styled.div`
   @media ${breakpoints.lg} {
-    max-width: 300px;
+    max-width: 400px;
     margin: 0 auto;
   }
   @media ${breakpoints.xl} {
-    max-width: 350px;
+    max-width: 450px;
   }
   h1 {
     margin: 40px auto;
     padding: 0 20px;
     font-size: 1.25rem;
     line-height: 1.5;
-    font-weight: 700;
+    font-weight: 400;
     color: ${colors.grey};
     max-width: 700px;
+    letter-spacing: 1px;
     @media ${breakpoints.lg} {
-      text-align: justify;
+      padding: 0 10px;
+      text-align: right;
+      font-size: 1.15rem;
+      line-height: 1.75;
     }
     strong {
       color: ${colors.white};

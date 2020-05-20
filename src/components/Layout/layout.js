@@ -19,10 +19,12 @@ const StyledMain = styled.main`
   background: ${colors.white};
   width: 100%;
   display: block;
+  padding: 20px;
 
   @media ${breakpoints.lg} {
     max-width: calc(100% - ${variables.headerLgWidth});
     margin-left: auto;
+    padding: 60px;
   }
   @media ${breakpoints.xl} {
     max-width: calc(100% - ${variables.headerXlWidth});
