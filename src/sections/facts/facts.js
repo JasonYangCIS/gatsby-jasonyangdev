@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Section from "../../components/section/section"
+import Text from "../../components/text/text"
 
 const Facts = () => {
   const data = useStaticQuery(graphql`
@@ -15,8 +16,8 @@ const Facts = () => {
   `)
   return(
     <Section>
-      <h2 dangerouslySetInnerHTML={{ __html: data.contentfulFacts.sectionTitle }}></h2>
-      <div dangerouslySetInnerHTML={{ __html: data.contentfulFacts.sectionContent.sectionContent }} />
+      <Text type='h2'>{data.contentfulFacts.sectionTitle}</Text>
+      <Text type='p'>{data.contentfulFacts.sectionContent.sectionContent}</Text>
     </Section>
   )
 }
