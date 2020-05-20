@@ -9,16 +9,29 @@ import Facts from "../sections/facts/facts"
 import Projects from "../sections/projects/projects"
 import Contact from "../sections/contact/contact"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Introduction />
-    <Experience />
-    <Skills />
-    <Facts />
-    <Projects />
-    <Contact />
-  </Layout>
-)
+class IndexPage extends React.Component {
+  componentDidMount = () => {
+    window.VANTA.DOTS({
+      el: ".vanta-bg",
+      color: 0xd27e36,
+      color2: 0xc5620c,
+      size: 5.00,
+      spacing: 20.00
+    })
+  }
+  render() {
+    return (
+      <Layout>
+        <SEO title="Jason Yang | Frontend Engineer" />
+        <Introduction />
+        <Experience />
+        <Skills />
+        <Facts />
+        <Projects />
+        <Contact />
+      </Layout>
+    );
+  }
+}
 
 export default IndexPage

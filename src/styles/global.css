@@ -45,6 +45,7 @@ a {
   color: #d27e36;
   transition: color 0.3s ease;
   text-decoration: none;
+  font-family: Roboto Mono,monospace,Source Sans Pro,Helvetica,sans-serif;
 }
 a:active,
 a:hover {

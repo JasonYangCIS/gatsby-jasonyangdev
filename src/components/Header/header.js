@@ -26,6 +26,8 @@ const StyledHeader = styled.header`
   text-align: center;
   display: inline-block;
   box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+  position: relative;
+  overflow: hidden;
 
   @media ${breakpoints.lg} {
     background: ${colors.dkGrey};
@@ -43,6 +45,8 @@ const StyledHeader = styled.header`
 `;
 
 const StyledH1Container = styled.div`
+  position: relative;
+  z-index: 100;
   @media ${breakpoints.lg} {
     max-width: 400px;
     margin: 0 auto;
@@ -79,6 +83,21 @@ const StyledImg = styled(Img)`
   animation: 2s ${bounce} ease-in-out infinite;
 `;
 
+const StyledVantaBg = styled.div`
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+`;
+
+const StyledImgContainer = styled.div`
+  position: relative;
+  z-index: 100;
+`;
+
 const Header = () => {
   const data = useStaticQuery(graphql`
     query SiteHeaderQuery {
@@ -100,11 +119,19 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <div data-aos="fade-up">
+      <StyledVantaBg
+        data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-delay="300"
+        className="vanta-bg" />
+      <StyledImgContainer
+        data-aos="fade-up"
+        data-aos-duration="500">
         <StyledImg fluid={data.contentfulHeader.logo.fluid} />
-      </div>
+      </StyledImgContainer>
       <StyledH1Container
         data-aos="fade-up"
+        data-aos-duration="600"
         dangerouslySetInnerHTML={{ __html: data.contentfulHeader.sectionContent.childMarkdownRemark.html }}
       />
     </StyledHeader>
