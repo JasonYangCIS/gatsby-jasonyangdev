@@ -44,11 +44,14 @@ a {
   -webkit-text-decoration-skip: objects;
   color: #d27e36;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 a:active,
 a:hover {
   outline-width: 0;
   color: #787878;
+  border-bottom-color: transparent;
+  border-bottom: 1px dotted;
 }
 abbr[title] {
   border-bottom: none;
