@@ -99,8 +99,13 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <StyledImg fluid={data.contentfulHeader.logo.fluid} />
-      <StyledH1Container dangerouslySetInnerHTML={{ __html: data.contentfulHeader.sectionContent.childMarkdownRemark.html }} />
+      <div data-aos="fade-up">
+        <StyledImg fluid={data.contentfulHeader.logo.fluid} />
+      </div>
+      <StyledH1Container
+        data-aos="fade-up"
+        dangerouslySetInnerHTML={{ __html: data.contentfulHeader.sectionContent.childMarkdownRemark.html }}
+      />
     </StyledHeader>
   )
 }

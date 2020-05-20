@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Jason Yang <jasonyangcis@gmail.com>",
   "dependencies": {
+    "aos": "^2.3.4",
     "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
     "gatsby": "^2.22.3",

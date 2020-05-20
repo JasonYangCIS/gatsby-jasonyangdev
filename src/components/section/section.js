@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 import styled from 'styled-components';
 import colors from '../_colors';
 import breakpoints from '../_breakpoints';
-import variables from '../_variables';
 
 const StyledSection = styled.section`
 	max-width: 700px;
@@ -20,7 +19,9 @@ const StyledSection = styled.section`
 const Section = ({ children }) => {
 
 	return (
-		<StyledSection>
+		<StyledSection
+			data-aos="fade-up"
+		>
 			{children}
 		</StyledSection>
 	)
