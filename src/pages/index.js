@@ -24,10 +24,10 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO title="Jason Yang | Frontend Engineer" />
         <Introduction />
+        <Projects />
         <Experience />
         <Skills />
         <Facts />
-        <Projects />
         <Contact />
       </Layout>
     );
