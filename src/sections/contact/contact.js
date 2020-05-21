@@ -17,7 +17,7 @@ const Contact = () => {
   return(
     <Section>
       <Text type='h2'>{data.contentfulContact.sectionTitle}</Text>
-      <Text type='p'>{data.contentfulContact.sectionContent.sectionContent}</Text>
+      <div dangerouslySetInnerHTML={{ __html: data.contentfulContact.sectionContent.sectionContent}}></div>
     </Section>
   )
 }

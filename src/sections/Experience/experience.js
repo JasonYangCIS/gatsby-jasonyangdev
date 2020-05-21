@@ -6,7 +6,7 @@ import Card from "../../components/card/card"
 import styled from 'styled-components';
 import colors from '../../components/_colors';
 
-const StyledPContainer = styled.p`
+const StyledPContainer = styled.div`
   width: 100%;
   display: inline-block;
   color: ${colors.mdGrey};

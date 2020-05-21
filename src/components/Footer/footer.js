@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import colors from '../_colors';
 import breakpoints from '../_breakpoints';
 import variables from '../_variables';
