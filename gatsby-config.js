@@ -32,13 +32,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-jasonyangdev`,
+        name: `www.jasonyangdev.com`,
         short_name: `jasonyangdev`,
         start_url: `/`,
-        background_color: `#787878`,
+        background_color: `#d27e36`,
         theme_color: `#d27e36`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon-512x512.png`, // This path is relative to the root of the site.
       },
     },
     {
