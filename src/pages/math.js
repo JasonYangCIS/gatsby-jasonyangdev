@@ -13,20 +13,21 @@ class MathPage extends React.Component {
         ******************************************************
         <br />
         <br />
-        <Text type='h3'>Build Requirements</Text>
-        score
+        <Text type='h2'>Requiremented Components</Text>
+        score - checks the states of multiplication cards
         <br />
-        timer
+        timer - starts as soon as someone answers any of the questions
         <br />
+        reset - reset states of equations and timer
         reset
         <br />
-        multiplication components
+        multiplication card - states (correct/wrong)
         <br />
         <br />
         ******************************************************
         <br />
         <br />
-        rules:
+        <Text type='h2'>Rules</Text>
         <ul>
           <li>answers are automatically submitted once you move onto the next equation</li>
           <li>work sheet has a 1 minute duration and begins as soon as you answer the a equation</li>
