@@ -1,40 +1,35 @@
 import React from "react"
-import Layout from "../components/layout/layoutMath"
-import Section from "../components/section/section"
-import Text from "../components/text/text"
+import Layout from "../components/v2/layout/layoutMath"
+import ComponentRenderer from "../components/v2/ComponentRenderer/ComponentRenderer"
 
 class MathPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.data = this.props.data;
+  }
+
   render() {
     return (
       <Layout>
-        <Text type='h2'>Multiplication Timed Worksheet</Text>
-        <Text type='p'>Welcome Mathletes, test your speedy multiplication math here.</Text>
-        <Text type='p'>All equations are randomly generated from 0 - 12</Text>
-        ******************************************************
-        <br />
-        <br />
-        <Text type='h2'>Requiremented Components</Text>
-        score - checks the states of multiplication cards
-        <br />
-        timer - starts as soon as someone answers any of the questions
-        <br />
-        reset - reset states of equations and timer
-        reset
-        <br />
-        multiplication card - states (correct/wrong)
-        <br />
-        <br />
-        ******************************************************
-        <br />
-        <br />
-        <Text type='h2'>Rules</Text>
-        <ul>
-          <li>answers are automatically submitted once you move onto the next equation</li>
-          <li>work sheet has a 1 minute duration and begins as soon as you answer the a equation</li>
-        </ul>
+        {
+          this.data.dataJson.components.map((component, index) => <ComponentRenderer data={component} key={`${component.type}_${index}`} />)
+        }
       </Layout>
-    );
-  }
-}
+    )
+  };
+};
 
 export default MathPage
+
+export const query = graphql`
+  query Math {
+    dataJson {
+      template
+      components {
+        type
+        content
+        htmlElement
+      }
+    }
+  }
+`

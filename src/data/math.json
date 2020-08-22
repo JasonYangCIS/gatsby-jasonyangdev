@@ -1,0 +1,60 @@
+{
+  "template": "math",
+  "components": [
+    {
+      "type": "text",
+      "htmlElement": "h2",
+      "content": "Multiplication Timed Worksheet"
+    },
+    {
+      "type": "text",
+      "htmlElement": "p",
+      "content": "Welcome Mathletes, test your speedy multiplication math here."
+    },
+    {
+      "type": "text",
+      "htmlElement": "p",
+      "content": "All equations are randomly generated from 0 - 12"
+    },
+    {
+      "type": "text",
+      "htmlElement": "h2",
+      "content": "Requiremented Components"
+    },
+    {
+      "type": "text",
+      "htmlElement": "p",
+      "content": "score - checks the states of multiplication cards"
+    },
+    {
+      "type": "text",
+      "htmlElement": "p",
+      "content": "timer - starts as soon as someone answers any of the questions"
+    },
+    {
+      "type": "text",
+      "htmlElement": "p",
+      "content": "reset - reset states of equations and timer"
+    },
+    {
+      "type": "text",
+      "htmlElement": "p",
+      "content": "multiplication card - states (correct/wrong)"
+    },
+    {
+      "type": "text",
+      "htmlElement": "h2",
+      "content": "Rules"
+    },
+    {
+      "type": "text",
+      "htmlElement": "p",
+      "content": "answers are automatically submitted once you move onto the next equation"
+    },
+    {
+      "type": "text",
+      "htmlElement": "p",
+      "content": "work sheet has a 1 minute duration and begins as soon as you answer the a equation"
+    }
+  ]
+}

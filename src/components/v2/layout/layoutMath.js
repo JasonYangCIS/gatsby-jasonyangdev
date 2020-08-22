@@ -9,12 +9,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import AOS from "aos";
 
-import Header from "../header/header"
-import Footer from "../footer/footer"
+// import Header from "../../header/header"
+// import Footer from "../../footer/footer"
 import styled from 'styled-components';
-import colors from '../_colors';
-import breakpoints from '../_breakpoints';
-import variables from '../_variables';
+import colors from '../../_colors';
+// import breakpoints from '../../_breakpoints';
+// import variables from '../../_variables';
 
 const StyledMain = styled.main`
   background: ${colors.white};

@@ -12,19 +12,25 @@ if (!process.env.CONTENTFUL_SPACE_ID || !process.env.CONTENTFUL_ACCESS_TOKEN) {
 module.exports = {
   siteMetadata: {
     title: `Jason Yang | Frontend Engineer`,
-    description: `www.jasonyangdev.com on Gatsby.`,
+    description: `www.jasonyangdev.com on GatsbyJS`,
     author: `@jasonyangdev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
       },
     },
     `gatsby-transformer-sharp`,
