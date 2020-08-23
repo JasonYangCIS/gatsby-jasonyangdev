@@ -55,6 +55,23 @@
       "type": "text",
       "htmlElement": "p",
       "content": "work sheet has a 1 minute duration and begins as soon as you answer the a equation"
-    }
+    },
+    {
+      "type": "equations",
+      "rangeMin": 0,
+      "rangeMax": 12,
+      "operation": "multiplication",
+      "quantity": 50
+    },
+    {
+      "type": "timer",
+      "duration": "60"
+		},
+		{
+			"type": "score"
+		},
+		{
+			"type": "reset"
+		}
   ]
 }

@@ -29,6 +29,10 @@ export const query = graphql`
         type
         content
         htmlElement
+        rangeMin
+        rangeMax
+        operation
+        quantity
       }
     }
   }

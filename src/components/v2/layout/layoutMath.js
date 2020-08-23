@@ -21,8 +21,7 @@ const StyledMain = styled.main`
   width: 100%;
   display: block;
   padding: 20px;
-  max-width: 1440px;
-  background: ${colors.offWhite};
+  max-width: 1100px;
   margin: 40px auto;
 `;
 
