@@ -17,7 +17,8 @@ class ComponentRenderer extends React.Component {
           rangeMin={this.componentData.rangeMin}
           rangeMax={this.componentData.rangeMax}
           operation={this.componentData.operation}
-          quantity={this.componentData.quantity} />
+          quantity={this.componentData.quantity}
+          timerDuration={this.componentData.timerDuration} />
       default:
         return null;
     }

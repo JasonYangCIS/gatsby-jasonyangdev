@@ -33,6 +33,7 @@ export const query = graphql`
         rangeMax
         operation
         quantity
+        timerDuration
       }
     }
   }

@@ -21,7 +21,7 @@ const StyledFieldset = styled.fieldset`
 			background: ${colors.success};
 		}
 	}
-	label {
+	label, span.equation__value {
 		width: 100%;
 		display: inline-block;
 		text-align: right;
@@ -46,9 +46,14 @@ const StyledFieldset = styled.fieldset`
 
 class EquationCard extends React.Component {
 	static propTypes = {
+		key: PropTypes.string.isRequired,
+		index: PropTypes.number.isRequired,
 		rangeMin: PropTypes.number.isRequired,
 		rangeMax: PropTypes.number.isRequired,
 		operation: PropTypes.string.isRequired,
+		handleClickTimer: PropTypes.number.isRequired,
+		timer: PropTypes.func.isRequired,
+		timerDuration: PropTypes.number.isRequired,
 	};
 
 	constructor(props) {
@@ -127,7 +132,7 @@ class EquationCard extends React.Component {
 
 	onFocus() {
 		// start timer as soon as user enters the input field
-		if (this.props.timer === 60) {
+		if (this.props.timer === this.props.timerDuration) {
 			this.props.handleClickTimer();
 		}
 	}
@@ -158,18 +163,20 @@ class EquationCard extends React.Component {
 				className={
 					fieldSetClass
 				}>
-				<label htmlFor={`equation_card_${this.props.index}`}>{this.state.valueOne}</label>
-				<label htmlFor={`equation_card_${this.props.index}`}>{this.state.valueTwo}</label>
-				<span className="equation__operator">{this.getOperator()}</span>
-				<input
-					id={`equation_card_${this.props.index}`}
-					type="number"
-					ref={input => (this.input = input)}
-					onChange={() => this.onChange()}
-					onBlur={() => this.onBlur()}
-					onFocus={() => this.onFocus()}
-					disabled={this.state.answered || this.props.timer === 0}
-				/>
+				<label htmlFor={`equation_card_${this.props.index}`}>
+					<span className="equation__value">{this.state.valueOne}</span>
+					<span className="equation__value">{this.state.valueTwo}</span>
+					<span className="equation__operator">{this.getOperator()}</span>
+					<input
+						id={`equation_card_${this.props.index}`}
+						type="number"
+						ref={input => (this.input = input)}
+						onChange={() => this.onChange()}
+						onBlur={() => this.onBlur()}
+						onFocus={() => this.onFocus()}
+						disabled={this.state.answered || this.props.timer === 0}
+					/>
+				</label>
 			</StyledFieldset>
 		)
 	}

@@ -9,7 +9,7 @@
     {
       "type": "text",
       "htmlElement": "p",
-      "content": "Welcome Mathletes, test your speedy mental math here. <br />All equations are randomly generated from 1 - 12"
+      "content": "welcome Mathletes, test your mental math here <br />all equations are randomly generated from 1 - 12"
     },
     {
       "type": "text",
@@ -26,17 +26,18 @@
       "rangeMin": 1,
       "rangeMax": 12,
       "operation": "multiplication",
-      "quantity": 50
+      "quantity": 50,
+      "timerDuration": 60
     },
     {
       "type": "text",
       "htmlElement": "h3",
-      "content": "TODO...."
+      "content": "TODO..."
     },
     {
       "type": "text",
       "htmlElement": "p",
-      "content": "ability to choose what operators to test<br /> ability to define timer duration<br />ability to specify how many equations to show"
+      "content": "ability to choose what operators to test<br /> ability to define timer duration<br />ability to specify how many equations to show<br />handle enter key - go to next item"
     }
   ]
 }
