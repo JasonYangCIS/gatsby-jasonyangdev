@@ -14,11 +14,11 @@ const StyledFieldset = styled.fieldset`
 	padding: 5px;
 	box-shadow: 0 3px 6px rgba(0,0,0,.05);
 	&.equation{
-		&--incorrect {
-			background: ${colors.danger}
+		&--incorrect input {
+			background: ${colors.danger};
 		}
-		&--correct {
-			background: ${colors.success}
+		&--correct input {
+			background: ${colors.success};
 		}
 	}
 	label {
@@ -125,6 +125,13 @@ class EquationCard extends React.Component {
 		// if on last item, submit the form
 	}
 
+	onFocus() {
+		// start timer as soon as user enters the input field
+		if (this.props.timer === 60) {
+			this.props.handleClickTimer();
+		}
+	}
+
 	setAnswered() {
 		if (this.input.value.length > 0) {
 			this.setState({
@@ -142,7 +149,7 @@ class EquationCard extends React.Component {
 		let fieldSetClass = '';
 		if (this.state.answered && this.state.correct) {
 			fieldSetClass = 'equation--correct';
-		} else if (this.state.answered) {
+		} else if (this.state.answered || this.props.timer === 0) {
 			fieldSetClass = 'equation--incorrect';
 		}
 
@@ -160,7 +167,8 @@ class EquationCard extends React.Component {
 					ref={input => (this.input = input)}
 					onChange={() => this.onChange()}
 					onBlur={() => this.onBlur()}
-					disabled={this.state.answered}
+					onFocus={() => this.onFocus()}
+					disabled={this.state.answered || this.props.timer === 0}
 				/>
 			</StyledFieldset>
 		)

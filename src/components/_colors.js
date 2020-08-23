@@ -11,8 +11,8 @@ export const colors = {
 	googlePlus: '#DD4B39',
 	faceBook: '#3B5998',
 	instagram: '#3F729B',
-	danger: '#ff4444',
-	success: '#00C851'
+	danger: '#ff8080',
+	success: '#5bcc89'
 };
 
 export default colors;
