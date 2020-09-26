@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-440a72d9aef6e9f09ef0.js"
+    "url": "webpack-runtime-f95d12b150e1d0d49d82.js"
   },
   {
     "url": "framework-5fc6169171e885c3b522.js"
@@ -43,10 +43,16 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9c9596a46ba0192a2aad90b79b7f606e"
+    "revision": "52be6810f9e9abbc88746d4ec7967b88"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-7c31e2436cade51cbcda.js"
+  },
+  {
+    "url": "js/three.r119.min.js"
+  },
+  {
+    "url": "js/vanta.birds.min.js"
   },
   {
     "url": "manifest.webmanifest",
