@@ -76,7 +76,7 @@ const StyledH1Container = styled.div`
 `;
 
 const StyledImg = styled(Img)`
-  max-width: 300px;
+  max-width: 450px;
   margin: 40px auto 0px;
   animation: 2s ${bounce} ease-in-out infinite;
 `;
