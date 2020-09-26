@@ -11,12 +11,23 @@ import Contact from "../sections/contact/contact"
 
 class IndexPage extends React.Component {
   componentDidMount = () => {
-    window.VANTA.DOTS({
+    window.VANTA.BIRDS({
       el: ".vanta-bg",
-      color: 0xd27e36,
-      color2: 0xc5620c,
-      size: 5.00,
-      spacing: 20.00
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color1: 0xd27e36,
+      color2: 0xd235bf,
+      birdSize: 0.50,
+      wingSpan: 20.00,
+      speedLimit: 2.00,
+      separation: 50.00,
+      cohesion: 50.00,
+      quantity: 4.00
     })
   }
   render() {
