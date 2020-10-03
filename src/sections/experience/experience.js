@@ -1,10 +1,10 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Section from "../../components/section/section"
-import Text from "../../components/text/text"
-import Card from "../../components/card/card"
-import styled from 'styled-components';
-import colors from '../../components/_colors';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Section from "../../components/section/section";
+import Text from "../../components/text/text";
+import Card from "../../components/card/card";
+import styled from "styled-components";
+import colors from "../../components/_colors";
 
 const StyledPContainer = styled.div`
   width: 100%;
@@ -29,22 +29,24 @@ const Experience = () => {
         sectionTitle
       }
     }
-  `)
+  `);
 
   return (
     <Section>
-      <Text type='h2'>{data.contentfulExperience.sectionTitle}</Text>
-      {
-        data.contentfulExperience.experience.map((element, key) => (
-          <Card key={key}>
-            <Text type='h4'>{element.company}</Text>
-            <Text type='h5'>{element.datePosition}</Text>
-            <StyledPContainer dangerouslySetInnerHTML={{ __html: element.sectionContent.sectionContent }} />
-          </Card>
-        ))
-      }
+      <Text type="h2">{data.contentfulExperience.sectionTitle}</Text>
+      {data.contentfulExperience.experience.map((element, key) => (
+        <Card key={key}>
+          <Text type="h4">{element.company}</Text>
+          <Text type="h5">{element.datePosition}</Text>
+          <StyledPContainer
+            dangerouslySetInnerHTML={{
+              __html: element.sectionContent.sectionContent,
+            }}
+          />
+        </Card>
+      ))}
     </Section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

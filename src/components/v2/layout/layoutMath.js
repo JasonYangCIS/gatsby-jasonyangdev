@@ -5,11 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
-import styled from 'styled-components';
-import colors from '../../_colors';
+import styled from "styled-components";
+import colors from "../../_colors";
 
 const StyledMain = styled.main`
   background: ${colors.white};
@@ -24,7 +24,7 @@ class Layout extends React.Component {
   render() {
     return (
       <>
-				<StyledMain>{this.props.children}</StyledMain>
+        <StyledMain>{this.props.children}</StyledMain>
       </>
     );
   }
@@ -32,6 +32,6 @@ class Layout extends React.Component {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

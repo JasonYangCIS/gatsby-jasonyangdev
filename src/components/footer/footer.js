@@ -1,9 +1,9 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from 'styled-components';
-import colors from '../_colors';
-import breakpoints from '../_breakpoints';
-import variables from '../_variables';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
+import colors from "../_colors";
+import breakpoints from "../_breakpoints";
+import variables from "../_variables";
 
 const StyledFooter = styled.footer`
   background-color: ${colors.orange};
@@ -50,10 +50,10 @@ const StyledFooter = styled.footer`
           color: ${colors.gitHub};
         }
         &.fa-linkedin:hover {
-            color: ${colors.linkedIn};
+          color: ${colors.linkedIn};
         }
         &.fa-instagram:hover {
-            color: ${colors.instagram};
+          color: ${colors.instagram};
         }
       }
       span {
@@ -80,15 +80,19 @@ const Footer = () => {
         }
       }
     }
-  `)
+  `);
   return (
     <StyledFooter
       data-aos="fade-up"
       data-aos-duration="500"
       data-aos-delay="500"
-      dangerouslySetInnerHTML={{ __html: data.contentfulFooter.childContentfulFooterSectionContentTextNode.childMarkdownRemark.html }} 
+      dangerouslySetInnerHTML={{
+        __html:
+          data.contentfulFooter.childContentfulFooterSectionContentTextNode
+            .childMarkdownRemark.html,
+      }}
     />
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

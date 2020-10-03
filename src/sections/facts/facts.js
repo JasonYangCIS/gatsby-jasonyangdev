@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Section from "../../components/section/section"
-import Text from "../../components/text/text"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Section from "../../components/section/section";
+import Text from "../../components/text/text";
 
 const Facts = () => {
   const data = useStaticQuery(graphql`
@@ -13,13 +13,13 @@ const Facts = () => {
         sectionTitle
       }
     }
-  `)
-  return(
+  `);
+  return (
     <Section>
-      <Text type='h2'>{data.contentfulFacts.sectionTitle}</Text>
-      <Text type='p'>{data.contentfulFacts.sectionContent.sectionContent}</Text>
+      <Text type="h2">{data.contentfulFacts.sectionTitle}</Text>
+      <Text type="p">{data.contentfulFacts.sectionContent.sectionContent}</Text>
     </Section>
-  )
-}
+  );
+};
 
-export default Facts
+export default Facts;

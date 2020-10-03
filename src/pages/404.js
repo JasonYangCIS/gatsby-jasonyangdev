@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout/layout"
-import SEO from "../components/seo/seo"
+import Layout from "../components/layout/layout";
+import SEO from "../components/seo/seo";
 
 class NotFoundPage extends React.Component {
   componentDidMount = () => {
@@ -9,10 +9,10 @@ class NotFoundPage extends React.Component {
       el: ".vanta-bg",
       color: 0xd27e36,
       color2: 0xc5620c,
-      size: 5.00,
-      spacing: 20.00
-    })
-  }
+      size: 5.0,
+      spacing: 20.0,
+    });
+  };
   render() {
     return (
       <Layout>
@@ -24,4 +24,4 @@ class NotFoundPage extends React.Component {
   }
 }
 
-export default NotFoundPage
+export default NotFoundPage;

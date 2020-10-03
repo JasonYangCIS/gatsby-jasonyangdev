@@ -1,6 +1,6 @@
-import React from "react"
-import Text from "../../text/text"
-import Equations from "../../equations/equations"
+import React from "react";
+import Text from "../../text/text";
+import Equations from "../../equations/equations";
 
 class ComponentRenderer extends React.Component {
   constructor(props) {
@@ -10,19 +10,26 @@ class ComponentRenderer extends React.Component {
 
   render() {
     switch (this.componentData.type) {
-      case 'text':
-        return <Text type={this.componentData.htmlElement}>{this.componentData.content}</Text>
-      case 'equations':
-        return <Equations
-          rangeMin={this.componentData.rangeMin}
-          rangeMax={this.componentData.rangeMax}
-          operation={this.componentData.operation}
-          quantity={this.componentData.quantity}
-          timerDuration={this.componentData.timerDuration} />
+      case "text":
+        return (
+          <Text type={this.componentData.htmlElement}>
+            {this.componentData.content}
+          </Text>
+        );
+      case "equations":
+        return (
+          <Equations
+            rangeMin={this.componentData.rangeMin}
+            rangeMax={this.componentData.rangeMax}
+            operation={this.componentData.operation}
+            quantity={this.componentData.quantity}
+            timerDuration={this.componentData.timerDuration}
+          />
+        );
       default:
         return null;
     }
   }
 }
 
-export default ComponentRenderer
+export default ComponentRenderer;

@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Section from "../../components/section/section"
-import Text from "../../components/text/text"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Section from "../../components/section/section";
+import Text from "../../components/text/text";
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -13,13 +13,17 @@ const Contact = () => {
         }
       }
     }
-  `)
-  return(
+  `);
+  return (
     <Section>
-      <Text type='h2'>{data.contentfulContact.sectionTitle}</Text>
-      <div dangerouslySetInnerHTML={{ __html: data.contentfulContact.sectionContent.sectionContent}}></div>
+      <Text type="h2">{data.contentfulContact.sectionTitle}</Text>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: data.contentfulContact.sectionContent.sectionContent,
+        }}
+      ></div>
     </Section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -1,12 +1,12 @@
 require("dotenv").config({
   path: `.env`,
-})
+});
 
 // ensure Contentful API keys are set
 if (!process.env.CONTENTFUL_SPACE_ID || !process.env.CONTENTFUL_ACCESS_TOKEN) {
   throw new Error(
-    'Contentful spaceId and the access token need to be provided.'
-  )
+    "Contentful spaceId and the access token need to be provided."
+  );
 }
 
 module.exports = {
@@ -48,7 +48,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-contentful',
+      resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -75,6 +75,6 @@ module.exports = {
       options: {
         trackingId: "UA-62879451-1",
       },
-    }
+    },
   ],
-}
+};

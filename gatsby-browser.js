@@ -5,7 +5,7 @@
  */
 
 // You can delete this file if you're not using it
-import "./src/styles/global.css"
-import "./src/styles/aos.css"
-import "./src/styles/font-awesome/font-awesome.min.css"
-import "./src/styles/fonts.css"
+import "./src/styles/global.css";
+import "./src/styles/aos.css";
+import "./src/styles/font-awesome/font-awesome.min.css";
+import "./src/styles/fonts.css";

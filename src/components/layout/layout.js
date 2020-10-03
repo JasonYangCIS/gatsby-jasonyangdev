@@ -5,16 +5,16 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 import AOS from "aos";
 
-import Header from "../header/header"
-import Footer from "../footer/footer"
-import styled from 'styled-components';
-import colors from '../_colors';
-import breakpoints from '../_breakpoints';
-import variables from '../_variables';
+import Header from "../header/header";
+import Footer from "../footer/footer";
+import styled from "styled-components";
+import colors from "../_colors";
+import breakpoints from "../_breakpoints";
+import variables from "../_variables";
 
 const StyledMain = styled.main`
   background: ${colors.white};
@@ -35,7 +35,7 @@ const StyledMain = styled.main`
 class Layout extends React.Component {
   componentDidMount = () => {
     AOS.init({
-      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
       debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
       throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
@@ -43,10 +43,10 @@ class Layout extends React.Component {
       offset: 100, // offset (in px) from the original trigger point
       delay: 100, // values from 0 to 3000, with step 50ms
       duration: 400, // values from 0 to 3000, with step 50ms
-      easing: 'ease', // default easing for AOS animations
+      easing: "ease", // default easing for AOS animations
       once: true, // whether animation should happen only once - while scrolling down
     });
-  }
+  };
 
   render() {
     return (
@@ -61,6 +61,6 @@ class Layout extends React.Component {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

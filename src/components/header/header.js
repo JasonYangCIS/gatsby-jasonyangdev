@@ -1,11 +1,11 @@
-import PropTypes from "prop-types"
-import React from "react"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
-import styled, { keyframes } from 'styled-components';
-import colors from '../_colors';
-import breakpoints from '../_breakpoints';
-import variables from '../_variables';
+import PropTypes from "prop-types";
+import React from "react";
+import Img from "gatsby-image";
+import { useStaticQuery, graphql } from "gatsby";
+import styled, { keyframes } from "styled-components";
+import colors from "../_colors";
+import breakpoints from "../_breakpoints";
+import variables from "../_variables";
 
 const bounce = keyframes`
   0% {
@@ -18,14 +18,14 @@ const bounce = keyframes`
   to {
     transform: translateY(0)
   }
-`
+`;
 
 const StyledHeader = styled.header`
   background: ${colors.dkGrey};
   width: 100%;
   text-align: center;
   display: inline-block;
-  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   overflow: hidden;
 
@@ -113,7 +113,7 @@ const Header = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <StyledHeader>
@@ -121,27 +121,28 @@ const Header = () => {
         data-aos="fade-up"
         data-aos-duration="500"
         data-aos-delay="300"
-        className="vanta-bg" />
-      <StyledImgContainer
-        data-aos="fade-up"
-        data-aos-duration="500">
+        className="vanta-bg"
+      />
+      <StyledImgContainer data-aos="fade-up" data-aos-duration="500">
         <StyledImg fluid={data.contentfulHeader.logo.fluid} />
       </StyledImgContainer>
       <StyledH1Container
         data-aos="fade-up"
         data-aos-duration="600"
-        dangerouslySetInnerHTML={{ __html: data.contentfulHeader.sectionContent.childMarkdownRemark.html }}
+        dangerouslySetInnerHTML={{
+          __html: data.contentfulHeader.sectionContent.childMarkdownRemark.html,
+        }}
       />
     </StyledHeader>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   data: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   data: ``,
-}
+};
 
-export default Header
+export default Header;
