@@ -28,6 +28,7 @@ class IndexPage extends React.Component {
       separation: 50.0,
       cohesion: 50.0,
       quantity: 4.0,
+      backgroundColor: 0x0,
     });
   };
   render() {
