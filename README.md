@@ -30,7 +30,10 @@ This section consists of 4 custom components (planning to build more) for experi
 - Real-time dynamic movie data fetched from [The Movie DB](https://www.themoviedb.org/documentation/api).
 - Parse movies data and display responsively.
 
-### Deployment
+### Deployment (rsync)
 
+rsync everything from public into the bucket: `gsutil -m rsync -r -c -d public/ gs://www.jasonyangdev.com`  
+
+### Deployment (rm and cp)
 Delete everything in the bucket: `gsutil rm 'gs://www.jasonyangdev.com/**'`  
 Copy everything from public into the bucket: `gsutil -m cp -r public/* 'gs://www.jasonyangdev.com'`
